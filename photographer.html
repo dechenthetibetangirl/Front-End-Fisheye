@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Fish eye logo" />
+      </a>
+    </header>
+    <main id="main">
+      <div class="photograph-header"></div>
+      <div class="selector">
+        <span>Trier par :</span>
+        <div class="select">
+          <div class="dropdown">
+            <button onclick="showDropdown()" class="dropbtn">
+              <em class="fa-solid fa-chevron-down"></em>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#main" id="optionPop" onclick="setValue(1)"
+                >Popularité</a
+              >
+              <a href="#main" id="optionDat" onclick="setValue(2)">Date</a>
+              <a href="#main" id="optionTit" onclick="setValue(3)">Titre</a>
+            </div>
+          </div>
+
+          <select aria-label="select" id="mySelect" style="display: none">
+            <option value="1" selected>Popularité</option>
+            <option value="2">Date</option>
+            <option value="3">Titre</option>
+          </select>
+        </div>
+      </div>
+      <div id="mainContent" class="photograph-main byLikes"></div>
+      <div class="photograph-info"></div>
+      <div class="preview-box" id="lightbox">
+        <div class="close">
+          <em class="fa-solid fa-x fa-2xl"></em>
+        </div>
+        <div class="image-box">
+          <div class="slide prev">
+            <em class="fa-solid fa-chevron-left"></em>
+          </div>
+          <div id="inside"></div>
+          <div class="slide next">
+            <em class="fa-solid fa-chevron-right"></em>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="contact_modal"></div>
+    <script src="/scripts/utils/dropdown.js"></script>
+    <script src="/scripts/factories/photographer.js "></script>
+    <script src="/scripts/pages/photographer.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+  </body>
+</html>

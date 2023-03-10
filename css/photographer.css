@@ -1,0 +1,539 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+  
+  h1 {
+    color: #901c1c;
+    margin-right: 100px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-left: 100px;
+  }
+  
+  #contact_modal {
+    display: none;
+    height: 100%;
+  }
+  * {
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .photograph-header {
+    background-color: #fafafa;
+    height: 300px;
+    margin: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photograph-header section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+  }
+  .photograph-header section h1 {
+    color: #d3573c;
+    font-size: 50px;
+    margin: 5px 0;
+  }
+  .photograph-header section h2 {
+    color: #901c1c;
+    margin: 5px 0;
+  }
+  
+  .photograph-header section img {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    object-fit: cover;
+  }
+  .photograph-header section p {
+    color: black;
+  }
+  
+  /* Dropdown button on hover & focus */
+  
+  /* The container <div> - needed to position the dropdown content */
+  .selector {
+    margin-left: 99px;
+    margin-top: 50px;
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    max-height: 100px;
+  }
+  
+  .photograph-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3%;
+    row-gap: 20px;
+    padding: 50px 100px;
+  }
+  .card {
+    text-decoration: none;
+  }
+  .card img {
+    height: 350px;
+    width: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .card video {
+    height: 350px;
+    width: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .card_footer .title {
+    color: #901c1c;
+  }
+  .card_footer .likeCount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .likeCount i {
+    cursor: pointer;
+    color: #901c1c;
+  }
+  .likeCount p {
+    color: black;
+  }
+  i.liked {
+    font-weight: bold;
+  }
+  
+  a video {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+  }
+  .card_footer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .photograph-info {
+    position: fixed;
+    background-color: #db8876;
+    width: 300px;
+    height: 3rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: 0;
+    right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row-reverse;
+  }
+  .photograph-info div {
+    height: auto;
+    display: flex;
+  }
+  
+  .contact_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    margin-top: 20px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901c1c;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #contact_modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.542);
+  
+    z-index: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal {
+    position: relative;
+    top: 5%;
+    border-radius: 5px;
+    background-color: #db8876;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+    margin: auto;
+  }
+  
+  .modal header {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-flow: column;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  
+  .modal header img {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .modal header h2 {
+    font-size: 45px;
+    margin: 0;
+    justify-self: flex-start;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  form fieldset label {
+    color: #312e2e;
+    font-size: 36px;
+    width: 100%;
+    font-size: 25px;
+  }
+  
+  form fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    align-items: self-start;
+    margin-bottom: 26px;
+    padding: 0;
+  }
+  
+  form fieldset label input {
+    width: 100%;
+    height: 68px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  form fieldset label textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+  
+    font-size: 20px;
+  }
+  
+  .preview-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.542);
+  
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .preview-box .close {
+    color: #901c1c;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .image-box {
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #inside {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+  }
+  #inside img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  #inside video {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .preview-box.show {
+    opacity: 1;
+  
+    display: flex;
+    pointer-events: auto;
+  }
+  .slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #901c1c;
+  }
+  .slide.prev {
+    left: 20%;
+  }
+  .slide.next {
+    right: 20%;
+  }
+  #inside .likeCount {
+    display: none;
+  }
+  #inside h3 {
+    margin-top: 5px;
+  }
+  
+  select {
+    appearance: none;
+    width: 200px;
+    padding: 10px;
+  }
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #901c1c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    width: 130px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .dropbtn p {
+    margin: 0;
+  }
+  .dropbtn i {
+    scale: 70%;
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #901c1c;
+    color: white;
+  
+    width: 130px;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    border-top: 1px solid white;
+    width: 100px;
+    padding: 12px 5px;
+    text-decoration: none;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #b32424;
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block;
+  }
+  @media (max-width: 1500px) {
+    .photograph-main {
+      justify-content: space-evenly;
+    }
+  }
+  @media (max-width: 950px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px 50px;
+    }
+    main {
+      display: flex;
+      flex-flow: column;
+    }
+    .photograph-header {
+      width: 100%;
+      flex-flow: column wrap;
+      align-items: baseline;
+      margin: 0;
+    }
+    .photograph-header section {
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      padding: 0;
+      max-height: 300px;
+    }
+    section .info {
+      margin: 0;
+    }
+    .photograph-main {
+      justify-content: center;
+    }
+    #inside {
+      padding: 45px;
+    }
+    #inside,
+    img {
+      object-fit: contain;
+    }
+    .preview-box .close {
+      top: 5%;
+    }
+  }
+  @media (max-width: 650px) {
+    header {
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+    header .logo {
+      margin: 0;
+    }
+    .photograph-header {
+      height: 500px;
+    }
+    .photograph-header section {
+      max-height: 100%;
+      flex-direction: column;
+    }
+  
+    section img {
+      order: 1;
+    }
+    #inside img {
+      height: auto;
+      max-height: 650px;
+    }
+    #inside video {
+      height: auto;
+      max-height: 650px;
+    }
+    .info {
+      order: 2;
+    }
+    .contact_button {
+      order: 3;
+    }
+    .modal {
+      width: 70%;
+    }
+    .modal header {
+      padding: 0;
+    }
+    .modal header h2 {
+      font-size: 30px;
+    }
+    form fieldset {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 380px) {
+    header {
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+    .logo {
+      width: 95px;
+      height: 25px;
+    }
+  
+    main {
+      justify-content: center;
+      align-items: center;
+    }
+    .photograph-main {
+      padding: 0;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+    }
+    .card_footer {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+    }
+    .selector {
+      margin: 50px 0;
+    }
+    .card img {
+      max-width: 250px;
+      margin: 0;
+    }
+    .card video {
+      width: 250px;
+      margin: 0;
+    }
+  }
+  
