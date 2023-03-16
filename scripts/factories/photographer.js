@@ -33,7 +33,7 @@ function photographerFactory(data) {
     }
     return { name, picture, getUserCardDOM }
   }
-  //  profi factory
+  //  profil factory
   function profilFactory(data) {
     const { name, portrait, city, country, tagline, price } = data
   
@@ -127,7 +127,7 @@ function photographerFactory(data) {
           p.classList.remove('liked')
           heart.classList.remove('liked')
   
-          p.innerHTML = likes - 1
+          p.innerHTML = likes
         } else {
           p.classList.add('liked')
           heart.classList.add('liked')
